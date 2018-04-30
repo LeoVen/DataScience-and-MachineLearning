@@ -52,9 +52,10 @@ def main():
 		y_axis = [n.name for n in country_array]
 		x_axis = [c.calculate_score() for c in country_array]
 
-		cut = 20
+		cut = len(x_axis)
 
-		plt.bar(y_axis[:cut], width = 0.5, height = x_axis[:cut])
+		# plt.bar(y_axis[:cut], width = 0.5, height = x_axis[:cut])
+		plt.plot(y_axis[:cut], x_axis[:cut])
 		plt.show()
 
 
