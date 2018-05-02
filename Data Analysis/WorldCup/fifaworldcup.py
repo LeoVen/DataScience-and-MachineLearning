@@ -44,10 +44,13 @@ def main():
 	#x_axis_02 = []
 	y_axis_02 = []
 
+	y_axis_03 = []
+
 	for i in range(df_size):
 		x_axis_01.append(countries[i].team)
 		y_axis_01.append(countries[i].wins)
 		y_axis_02.append(countries[i].loses)
+		y_axis_03.append(countries[i].draws)
 
 	for i in range(df_size):
 		y_axis_02[i] *= -1
@@ -56,8 +59,15 @@ def main():
 	plt.xticks(rotation = 90)
 	
 	# nrows, ncols, index
-	plt.bar(x_axis_01, y_axis_01)
-	plt.bar(x_axis_01, y_axis_02)
+	plt.bar(x_axis_01, y_axis_01, color = 'blue')
+	plt.bar(x_axis_01, y_axis_02, color = 'red')
+
+	plt.xlabel('Countries that participated in a World Cup')
+	plt.ylabel('Wins and Loses')
+
+	ax = plt.twinx()
+	ax.plot(y_axis_03, 'go--',color = 'orange', linewidth = 1)
+	plt.ylabel('Draws')
 
 	plt.show()
 
