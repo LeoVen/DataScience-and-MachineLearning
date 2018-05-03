@@ -52,6 +52,9 @@ def main():
 		y_axis_02.append(countries[i].loses)
 		y_axis_03.append(countries[i].draws)
 
+	m1 = max(y_axis_02)
+	m2 = max(y_axis_01)
+
 	for i in range(df_size):
 		y_axis_02[i] *= -1
 
@@ -66,7 +69,8 @@ def main():
 	plt.ylabel('Wins and Loses')
 
 	ax = plt.twinx()
-	ax.plot(y_axis_03, 'go--',color = 'orange', linewidth = 1)
+	ax.plot(y_axis_03, 'bo--',color = 'orange', linewidth = 1)
+	ax.set_ylim(0 - m1 - 2, m2)
 	plt.ylabel('Draws')
 
 	plt.show()
