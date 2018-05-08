@@ -1,3 +1,13 @@
+# #
+# fifaworldcup.py
+#
+# Leonardo Vencovsky (https://github.com/LeoVen)
+#
+# 02/05/2018
+#
+# Data Analysis of World Cup data
+# Data taken from (http://www.fifa.com/fifa-tournaments/statistics-and-records/worldcup/teams/index.html)
+# #
 import csv
 import re
 from datetime import datetime

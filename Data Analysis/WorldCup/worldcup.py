@@ -1,3 +1,13 @@
+# #
+# fifaworldcup.py
+#
+# Leonardo Vencovsky (https://github.com/LeoVen)
+#
+# 29/04/2018
+#
+# Data Analysis of World Cup data
+# Data taken from (https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017)
+# #
 import csv
 import re
 from datetime import datetime
